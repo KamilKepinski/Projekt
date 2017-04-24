@@ -13,12 +13,12 @@ void cScena::key(unsigned char key, int x_d, int y_d)
 {
 	switch (key)
 	{
-	case 'a':
-		paletka->przesun(0, 0.1);
+	case 'd':
+		figury[1]->przesun(1,0);
 		glutPostRedisplay();
 		break;
-	case 'd':
-		paletka->przesun(0, -0.1);
+	case 'a':
+		figury[1]->przesun(-1,0);
 		glutPostRedisplay();
 	}
 }
@@ -53,16 +53,15 @@ void cScena::aktualizuj()
 		for (int j = i + 1; j<figury.size(); j++)
 			if (figury[i]->Kolizja(*figury[j])) //znajduje kolizje
 			{
-			
+				figury[0]->Odbicie(30);
 			}
-
 }
 
 /*************************************/
 void cScena::init()
 {
 	cOkrag *okr = new cOkrag(0.6);
-	okr->setPredkosc(0.01,-75);
+	okr->setPredkosc(0.01,-80);
 	okr->ustaw_kolor(1, 0.3,0);
 	okr->przesun(0, 10);
 	figury.push_back(okr);
@@ -95,6 +94,7 @@ void idle()
 {
 	scena.loop();
 	glutPostRedisplay();
+
 	Sleep(1);
 }
 void cScena::loop()
@@ -125,6 +125,7 @@ void cScena::inicjuj(){
 	glEnable(GL_NORMALIZE);
 	glEnable(GL_COLOR_MATERIAL);
 	glutDisplayFunc(::przerysuj);
+	glutKeyboardFunc(::key);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glOrtho(-30, 30, -30, 30, -30, 30);
