@@ -50,5 +50,8 @@
     <ClCompile Include="Scena.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cPrzeszody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

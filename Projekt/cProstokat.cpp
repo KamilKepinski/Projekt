@@ -3,13 +3,15 @@
 #include <GL/gl.h>
 
 cProstokat::cProstokat(){
-	h = 0.1; w = 0.2;
+	w = 10;
+	h = 3;
+	setGeometria(x, y, -w, -h, w, h);
 }
 /**************************/
 cProstokat::cProstokat(float _h, float _w)
 {
 	w = _w; h = _h;
-	setGeometria(x, y, x - (w / 2), y - (h / 2), x + (w / 2), y + (h / 2));
+	setGeometria(x, y, -w, -h, w, h);
 }
 /**************************/
 void cProstokat::rysuj(){
@@ -30,3 +32,6 @@ void cProstokat::rysuj(){
 	glPopMatrix();
 }
 /****************************/
+cProstokat::~cProstokat(){
+	
+}

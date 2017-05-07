@@ -2,12 +2,13 @@
 
 cOkrag::cOkrag(){
 	r = 0.1;
+	setGeometria(x, y, -r, -r, r, r);
 }
 /************************/
 cOkrag::cOkrag(float _r)
 {
 	r = _r;
-	setGeometria(x, y, x - r, y - r, x + r, y + r);
+	setGeometria(x, y,  -r, - r,  r, r);
 }
 /************************/
 void cOkrag::rysuj(){

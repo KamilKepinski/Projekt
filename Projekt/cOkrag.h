@@ -1,6 +1,5 @@
-#ifndef _COKRAG_H
-#define _COKRAG_H
-
+#ifndef _COKRAG _H
+#define _COKRAG _H
 #include "cFigura.h"
 
 class cOkrag : public cFigura{

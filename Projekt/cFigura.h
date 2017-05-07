@@ -1,5 +1,5 @@
-#ifndef _CFIGURA_H
-#define _CFIGURA_H
+#ifndef _CFIGURA _H
+#define _CFIGURA _H
 
 #include <iostream>
 #include <string>

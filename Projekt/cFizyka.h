@@ -1,5 +1,5 @@
-#ifndef fizyka_h
-#define fizyka_h
+#ifndef _CFIZYKA _H
+#define _CFIZYKA _H
 #define PI 3.14159
 
 
